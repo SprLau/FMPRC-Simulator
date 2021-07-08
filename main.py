@@ -59,7 +59,12 @@ print_with_comma(greatness[0] + greatness[selected] + greatness[another])
 
 print_with_period(country + random.choice(blame_again))
 
-print_with_comma(country + random.choice(blame_over_and_over_again) + '、' + random.choice(blame_over_and_over_again))
+selected = random.choice(blame_over_and_over_again)
+another = random.choice(blame_over_and_over_again)
+while another == selected:
+    another = random.choice(blame_over_and_over_again)
+
+print_with_comma(country + selected + '、' + another)
 
 print_with_period(ending[0] + country + ending[1] + country +ending[2])
 
